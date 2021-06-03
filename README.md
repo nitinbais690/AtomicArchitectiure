@@ -1,1 +1,1 @@
-# AtomicArchitectiure
+# AtomicArchitecture
