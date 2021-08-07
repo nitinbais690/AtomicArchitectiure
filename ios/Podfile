@@ -1,52 +1,22 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-source 'https://github.com/react-native-tvos/react-native-tvos-podspecs.git'
-source 'https://cdn.cocoapods.org/'
+platform :ios, '11.0'
 
-target 'Quickplay' do
+target 'GuardianA' do
 
-  platform :ios, '10.0'
-
+  use_unimodules!
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  
-  use_flipper_tvos!
-# If you want to use Flipper only for iOS, you can replace the line above with
-#
-# use_flipper!
-#
-# to pick up newer Flipper pods used in RN core 0.63.
-# They have not yet been adapted to work in tvOS.
-# use_flipper_tvos! works for both iOS and tvOS.
-
-
-  target 'QuickplayTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
-end
-
-target 'Quickplay-tvOS' do
-
-  platform :tvos, '12.0'
-
-  config = use_native_modules!
-
-  use_react_native!(:path => config["reactNativePath"])
-
-  use_flipper_tvos!
-
-  target 'Quickplay-tvOSTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
-end
-
-post_install do |installer|
-  flipper_post_install(installer)
+  # Uncomment to opt-in to using Flipper
+  #
+  # if !ENV['CI']
+  #   use_flipper!('Flipper' => '0.75.1', 'Flipper-Folly' => '2.5.3', 'Flipper-RSocket' => '1.3.1')
+  #   post_install do |installer|
+  #     flipper_post_install(installer)
+  #   end
+  # end
 end

@@ -1,4 +1,36 @@
 {
-  "name": "Quickplay",
-  "displayName": "MceOTT"
+  "name": "GuardianA",
+  "displayName": "GuardianA",
+  "expo": {
+    "name": "GuardianA",
+    "slug": "GuardianA",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "androidStatusBar": {
+      "backgroundColor": "#7438AD",
+      "translucent": false,
+      "barStyle": "dark-content"
+    },
+    "android": {
+      "package": "com.guardianA.android",
+      "splash": {
+        "backgroundColor": "#8c5bba",
+        "mdpi": "./src/res/images/splash/drawable-mdpi/1.png",
+        "hdpi": "./src/res/images/splash/drawable-hdpi/1.png",
+        "xhdpi": "./src/res/images/splash/drawable-xhdpi/1.png",
+        "xxhdpi": "./src/res/images/splash/drawable-xxhdpi/1.png",
+        "xxxhdpi": "./src/res/images/splash/drawable-xxxhdpi/1.png",
+        "resizeMode": "cover"
+      }
+    },
+    "ios": {
+      "splash": {
+        "image": "./src/res/images/splash.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#8c5bba"
+      }
+    }
+  }
 }

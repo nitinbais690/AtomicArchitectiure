@@ -1,42 +1,18 @@
 {
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "jsx": "react",
-    "lib": ["es6"],
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
     "strict": true,
-    "target": "es5",
-    "types": ["reflect-metadata"],
-    "module": "commonjs",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "baseUrl": ".",
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
     "paths": {
-      "*": ["src/*"],
-      "assets/*":["./assets/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@core/api/*":["./src/core/api/*"],
-      "@core/theme/*": ["./src/core/theme/*"],
-      "@core/network/*": ["./src/core/network/*"],
-      "@core/use-case/*": ["./src/core/use-case/*"],
-      "@series/domain/*": ["./src/features/series/domain/*"],
-      "@series/data/*": ["./src/features/series/data/*"],
-      "@series/components/*": ["./src/features/series/presentation/components/*"],
-      "@series/hooks/*": ["./src/features/series/presentation/hooks/*"],
-      "@series/screens/*": ["./src/features/series/presentation/screens/*"],
-      "@core/di/*": ["./src/core/di/*"],
-      "@series/di/*": ["./src/features/series/di/*"],
-      "@di/*": ["./src/di/*"],
+      "@app/*": ["./src/*"]
     }
-  },
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js"
-  ]
+  }
 }
